@@ -1,10 +1,12 @@
 <script >
 import AppMainTop from './main_components/AppMainTop.vue';
+import AppMainCardList from './main_components/AppMainCardList.vue';
 
 export default {
     name: "AppMain",
     components: {
-        AppMainTop
+        AppMainTop,
+        AppMainCardList,
     }
 }
 </script>
@@ -12,6 +14,7 @@ export default {
 <template>
     <div class="container">
         <AppMainTop />
+        <AppMainCardList />
     </div>
 </template>
 
@@ -19,7 +22,7 @@ export default {
 @use "../styles/partials/variables" as*;
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 30px;
     background-color: $secondary;

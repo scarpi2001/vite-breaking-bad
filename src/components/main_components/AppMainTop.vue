@@ -16,5 +16,6 @@ export default {
 .count_bar {
     background-color: $tertiary;
     padding: 15px;
+    margin-bottom: 50px;
 }
 </style>

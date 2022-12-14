@@ -2,7 +2,7 @@
 import axios from 'axios';
 import AppMainCard from './AppMainCard.vue';
 
-import { store } from './store.js';
+import { store } from '../../store';
 
 export default {
     name: "AppMainCardList",
@@ -31,7 +31,7 @@ export default {
 <template>
     <!-- contenitore cards -->
     <div class="cards_box">
-        <AppMainCard v-for="(card, index) in cards" :key="index" :details="card" />
+        <AppMainCard v-for="card in store.characterList" :key="card.id" :details="card" />
     </div>
 </template>
 

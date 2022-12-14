@@ -1,6 +1,9 @@
 <script >
 export default {
     name: "AppMainCard",
+    props: {
+        details: Object
+    }
 }
 </script>
 
@@ -8,10 +11,13 @@ export default {
     <!-- card -->
     <div class="card">
         <figure>
-            <img :src="details.thumb" :alt="details.series">
+            <img :src="details.image" :alt="details.name">
         </figure>
 
-        <span>{{ details.series }}</span>
+        <h3>{{ details.name }}</h3>
+        <div class="text">{{ details.status }}</div>
+        <div class="text">{{ details.species }}</div>
+        <div class="text">{{ details.gender }}</div>
     </div>
 </template>
 
@@ -19,19 +25,25 @@ export default {
 @use '../../styles/partials/variables' as*;
 
 .card {
-    width: calc(100% / 6 - 40px);
+    width: calc(100% / 3 - 40px);
+    padding: 20px;
     margin: 0 20px;
     margin-bottom: 30px;
+    text-align: center;
+    background-color: $primary;
+    border-radius: 20px;
 
     figure {
-        height: 150px;
         margin-bottom: 15px;
-        overflow: hidden;
+
+
+        img {
+            border-radius: 20px;
+        }
     }
 
-    span {
-        font-size: 18px;
+    .text {
+        margin-bottom: 5px;
     }
-
 }
 </style>
