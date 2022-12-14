@@ -6,10 +6,13 @@ export default {
 
 <template>
   <header>
-
+    <h1>Rick And Morty Api</h1>
   </header>
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/partials/variables" as*;
+header {
+  padding: 20px;
+  font-size: 22px;
+}
 </style>
