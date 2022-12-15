@@ -8,17 +8,24 @@ export default {
             store,
         }
     },
+    methods: {
+        reset() {
+            store.status = "";
+            this.$emit('filter');
+        }
+    }
 }
 </script>
 
 <template>
     <div class="select_container">
-        <select name="" id="" @click="$emit('filter')" v-model="store.status">
+        <select class="select" @click="$emit('filter')" v-model="store.status">
             <option disabled>Seleziona status</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>
             <option value="Unknown">Unknown</option>
         </select>
+        <button class="select button" @click="reset">Reset</button>
     </div>
 </template>
 
@@ -28,5 +35,16 @@ export default {
 .select_container {
     max-width: 1200px;
     margin: 30px auto;
+
+    .select {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .select.button {
+        color: $secondary;
+        background-color: $tertiary;
+        margin-left: 15px;
+    }
 }
 </style>
