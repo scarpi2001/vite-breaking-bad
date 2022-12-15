@@ -39,6 +39,12 @@ export default {
     .select {
         padding: 15px;
         border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $tertiary;
+            background-color: rgb(238, 237, 237);
+        }
     }
 
     .select.button {
