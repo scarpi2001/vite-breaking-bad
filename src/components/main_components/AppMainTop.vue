@@ -1,12 +1,20 @@
 <script >
+import { store } from '../../store';
+
 export default {
-    name: "AppMainTop"
+    name: "AppMainTop",
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
 <template>
+    <!-- count bar -->
     <div class="count_bar">
-        <h3>Found 100 elements</h3>
+        <h3>trovati {{ store.characterList.length }} elementi</h3>
     </div>
 </template>
 

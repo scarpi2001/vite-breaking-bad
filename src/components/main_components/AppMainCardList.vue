@@ -14,16 +14,21 @@ export default {
             store,
         }
     },
-    mounted() {
-        axios.get(store.apiURL)
-            .then(res => {
-                store.characterList = res.data.results;
-            })
-            .catch(err => {
-                console.log("Errori", err);
-            }
+    methods: {
+        getCards() {
+            axios.get(store.apiURL)
+                .then(res => {
+                    store.characterList = res.data.results;
+                })
+                .catch(err => {
+                    console.log("Errori", err);
+                }
 
-            );
+                );
+        }
+    },
+    mounted() {
+        this.getCards();
     }
 }
 </script>

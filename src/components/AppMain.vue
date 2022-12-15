@@ -12,6 +12,7 @@ export default {
 </script>
 
 <template>
+    <!-- container -->
     <div class="container">
         <AppMainTop />
         <AppMainCardList />
