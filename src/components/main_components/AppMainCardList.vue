@@ -1,5 +1,4 @@
 <script >
-import axios from 'axios';
 import AppMainCard from './AppMainCard.vue';
 
 import { store } from '../../store';
@@ -14,22 +13,6 @@ export default {
             store,
         }
     },
-    methods: {
-        getCards() {
-            axios.get(store.apiURL)
-                .then(res => {
-                    store.characterList = res.data.results;
-                })
-                .catch(err => {
-                    console.log("Errori", err);
-                }
-
-                );
-        }
-    },
-    mounted() {
-        this.getCards();
-    }
 }
 </script>
 
