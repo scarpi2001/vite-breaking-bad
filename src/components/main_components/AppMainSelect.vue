@@ -11,7 +11,7 @@ export default {
     methods: {
         reset() {
             store.status = "";
-            this.$emit('filter');
+            this.$emit('filterForStatus');
         }
     }
 }
@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div class="select_container">
-        <select class="select" @click="$emit('filter')" v-model="store.status">
+        <select class="select" @change="$emit('filterForStatus')" v-model="store.status">
             <option disabled>Seleziona status</option>
             <option value="Alive">Alive</option>
             <option value="Dead">Dead</option>

@@ -2,7 +2,7 @@
 import { store } from '../../store';
 
 export default {
-    name: "AppMainTop",
+    name: "AppCountBar",
     data() {
         return {
             store,

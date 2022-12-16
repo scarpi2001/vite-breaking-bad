@@ -1,7 +1,7 @@
 <script >
 import axios from 'axios';
 import AppMainSelect from './main_components/AppMainSelect.vue';
-import AppMainTop from './main_components/AppMainTop.vue';
+import AppCountBar from './main_components/AppCountBar.vue';
 import AppMainCardList from './main_components/AppMainCardList.vue';
 
 import { store } from '../store';
@@ -10,7 +10,7 @@ export default {
     name: "AppMain",
     components: {
         AppMainSelect,
-        AppMainTop,
+        AppCountBar,
         AppMainCardList,
     },
     data() {
@@ -45,10 +45,10 @@ export default {
 
 <template>
     <!-- select per stato -->
-    <AppMainSelect @filter="getCards" />
+    <AppMainSelect @filterForStatus="getCards" />
     <!-- container -->
     <div class="container">
-        <AppMainTop />
+        <AppCountBar />
         <AppMainCardList />
     </div>
 </template>
